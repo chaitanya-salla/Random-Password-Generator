@@ -9,7 +9,7 @@
 }
 
 body {
-  background: linear-gradient(0.33turn, #3f87a6, #ebf8e1, #f69d3c, #561423);;
+  background: linear-gradient(0.33turn, #3f87a6, #ebf8e1, #f69d3c, #561423);
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -47,17 +47,16 @@ body {
 button {
   width: 100%;
   border: none;
-  color: black;
+  background-color: brown;
+  color: white;
   border-radius: 5px;
   padding: 0.5rem;
   font-size: 1.2rem;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
 }
 
 button:hover {
-  background-color: brown;
-  color: white;
+    background-color: rgb(120, 15, 15);
 }
 
 .material-symbols-outlined {
