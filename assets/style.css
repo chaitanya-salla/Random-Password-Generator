@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: black;
+}
+
+body {
+  background: url("./background.jpg") no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: -5px -5px 1rem rgb(155, 70, 70);
+}
+
+#range {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+#passBox {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+button {
+  width: 100%;
+  border: none;
+  color: black;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: brown;
+  color: white;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.inputBox {
+  position: relative;
+}
+
+.inputBox span {
+  position: absolute;
+  top: 9px;
+  right: 7px;
+  cursor: pointer;
+}
