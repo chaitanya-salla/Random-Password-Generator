@@ -18,12 +18,15 @@ const currentPassLegth = slider.addEventListener("input", () => {
 });
 
 generateBtn.addEventListener("click", () => {
+  copyBtn.innerText = "content_copy";
   passwordTxtBox.value = generatedPassword();
 });
 
 copyBtn.addEventListener("click", () => {
-  if (passwordTxtBox.value !== "")
+  if (passwordTxtBox.value !== "") {
     navigator.clipboard.writeText(passwordTxtBox.value);
+    copyBtn.innerText = "check";
+  }
 });
 
 const generatedPassword = () => {
@@ -40,10 +43,8 @@ const generatedPassword = () => {
     return "";
   }
 
-  console.log(allChars);
   for (let i = 0; i < slider.value; i++) {
     password += allChars[Math.floor(Math.random() * allChars.length)];
-    console.log(password);
   }
 
   return password;

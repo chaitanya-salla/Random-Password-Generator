@@ -9,7 +9,7 @@
 }
 
 body {
-  background: url("./background.jpg") no-repeat;
+  background: linear-gradient(0.33turn, #3f87a6, #ebf8e1, #f69d3c, #561423);;
   background-size: cover;
   min-height: 100vh;
   display: flex;
