@@ -31,20 +31,33 @@ copyBtn.addEventListener("click", () => {
 
 const generatedPassword = () => {
   let password = "";
-  let allChars = "";
 
-  allChars += loweCase.checked ? lowerLetterts : "";
-  allChars += upperCase.checked ? lowerLetterts.toUpperCase() : "";
-  allChars += numbers.checked ? nums : "";
-  allChars += specialSymbols.checked ? symbols : "";
-
-  if (allChars === "") {
+  if (
+    !loweCase.checked &&
+    !upperCase.checked &&
+    !numbers.checked &&
+    !specialSymbols.checked
+  ) {
     alert("You must select atleast one option !!");
     return "";
   }
 
   for (let i = 0; i < slider.value; i++) {
-    password += allChars[Math.floor(Math.random() * allChars.length)];
+    if (loweCase.checked && password.length < slider.value)
+      password +=
+        lowerLetterts[Math.floor(Math.random() * lowerLetterts.length)];
+
+    if (upperCase.checked && password.length < slider.value)
+      password +=
+        lowerLetterts[
+          Math.floor(Math.random() * lowerLetterts.length)
+        ].toUpperCase();
+
+    if (numbers.checked && password.length < slider.value)
+      password += nums[Math.floor(Math.random() * nums.length)];
+
+    if (specialSymbols.checked && password.length < slider.value)
+      password += symbols[Math.floor(Math.random() * symbols.length)];
   }
 
   return password;
